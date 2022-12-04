@@ -44,6 +44,7 @@ cores=$(nproc --all)
 if [ "${cores}" -gt "12" ]; then
     cores=12
 fi
+echo $cores
 m "${bacon}" "-j${cores}"
 buildsuccessful="${?}"
 BUILD_END=$(date +"%s")
